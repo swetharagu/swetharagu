@@ -1,22 +1,25 @@
 package guvi;
-
-import java.util.Scanner;
-
+import java.util.*;
 public class number {
-	public static void main(String args[] ) {
-		Scanner in=new Scanner(System.in);
-
-		String s1;
-		String s2="";
-		System.out.println("enter string");
-		s1=in.nextLine();
-		int b=s1.length();
-		for(int i=b-1;i>=0;i--)
-		{
-			s2=s2+s1.charAt(i);
-		}
-		System.out.println(""+s2);
-	  
+public static void main(String a[])
+	{
+	int n;
+	System.out.println("Enter total no of values in the array");
+	Scanner s=new Scanner(System.in);
+	n=s.nextInt();
+	int a1[]=new int[n];
+	for(int i=0;i<n;i++)
+	a1[i]=s.nextInt();
+	for(int i=1;i<n;i++)
+	{
+	  for(int j=0;j<i;j++)
+	  {
+	    if(a1[j]==a1[i])
+	    System.out.println(a1[j]+"");
+	    break;
+	  }
+	  break;
 	}
-}
+	}
+	}
 
