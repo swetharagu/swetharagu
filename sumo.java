@@ -5,19 +5,33 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 public class sumo {
-public static void main(String[] args) {
-      Scanner s = new Scanner(System.in); 
-     String s1=s.next();
-       int n=s1.length();
-       int k=s.nextInt(); 
-      int a[]=new int[n];
-       for(int i=0;i<n;i++)
-           {
-           a[i]=s1.charAt(i)-48;
-       }
-       Arrays.sort(a);
-       for(int i=0;i<n-k;i++)
-           System.out.print(a[i]);
-   }
-}
+	public static void main(String[] args) {
+	     System.out.println("enter the input");
+	  Scanner sc=new Scanner(System.in);
+	  String s=sc.nextLine();
+		int m=s.length();
+		int j=0;
+		int g,n,k;
+			for(int i=0;i<m;i++){
+			g=s.charAt(i)-'0';
+			if(g==s.charAt(m-1)-'0')
+	{
+				n=s.charAt(0)-'0';
+		
+				k=pow(g,n);
+			}
+			else{
+		        n=s.charAt(i+1)-'0';
+		        k=pow(g,n);
+	                }j=j+k;}
+			System.out.println(j);
+		 }
+		 static  int pow(int g,int n){
+		    int total=1;
+		    for(int i=1;i<=n;i++){
+		        total*=g;
+	            }return total;
+		 }  }
+
+
 
