@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Validate {
    public static void main(String[] args){
    Scanner s=new Scanner(System.in);
-   String in=s.nextLine();
-   String out = in.replaceAll("(.)(?=\\1)", "$1*");
-   System.out.println(out);
+   String str=s.nextLine();
+   String str2= str.replaceAll("(.)(?=\\1)", "$1*");
+   System.out.println(str2);
    }
 		   }
    
